@@ -6,21 +6,26 @@
 /*   By: jde-alen <jde-alen@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 15:17:59 by jde-alen          #+#    #+#             */
-/*   Updated: 2021/10/30 18:46:49 by jde-alen         ###   ########.fr       */
+/*   Updated: 2021/10/30 19:14:53 by jde-alen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *string, ...)
+int	ft_types(const char *str, va_list types, int *j)
+{
+	if ()
+}
+
+int	ft_printf(const char *str, ...)
 {
 	va_list types;
 	int j;
 
-	while (string != "%")
-		ft_putstr(string);
+	while (str != "%")
+		ft_putstr(str);
 
-	if (string + 1 == "%")
+	if (str + 1 == "%")
 		ft_putchar("%");
 
 	va_start types;
