@@ -6,11 +6,12 @@
 /*   By: jde-alen <jde-alen@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 15:18:03 by jde-alen          #+#    #+#             */
-/*   Updated: 2021/11/02 18:25:34 by jde-alen         ###   ########.fr       */
+/*   Updated: 2021/11/02 18:57:15 by jde-alen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdarg.h>
 
 /*uma que printa*/
 int	ft_putchar_fd(const char c, int fd)
@@ -56,7 +57,7 @@ int	process_char(va_list types)
 		return (1);
 }
 
-/*uma que mostra %s*/
+/*uma que mostra %s
 int process_str(va_list types)
 {
 	char *arg;
@@ -68,8 +69,8 @@ int process_str(va_list types)
 		return (4);
 	}
 	ft_putstr_fd(arg, 1);
-	return (ft_strlen(arg));
-}
+	return (ft_strlen(arg)); 
+}*/
 
 /*uma que mostra %u*/
 
