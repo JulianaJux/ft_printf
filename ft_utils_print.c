@@ -6,27 +6,29 @@
 /*   By: jde-alen <jde-alen@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 15:18:03 by jde-alen          #+#    #+#             */
-/*   Updated: 2021/10/30 19:18:31 by jde-alen         ###   ########.fr       */
+/*   Updated: 2021/11/02 18:25:34 by jde-alen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 /*uma que printa*/
-void	ft_putchar(char c)
+int	ft_putchar_fd(const char c, int fd)
 {
-	write(1, &c, 1);
+	write(1, &c, sizeof(c));
+	return (1);
 }
 /*printa string*/
-void	ft_putstr(char *s)
+int	ft_putstr_fd(const char *s, int fd)
 {
 	if (!s)
-		return ;
+		return (0);
 	while (*s != '\0')
 	{
-		ft_putchar(*s);
+		ft_putchar_fd(*s, 1);
 		s++;
 	}
+	return (ft_strlen(s));
 }
 /*tamanho total de str*/
 int	ft_strlen(const char *s)
@@ -50,7 +52,7 @@ int	process_char(va_list types)
 		int arg;
 
 		arg = va_arg(types, int);
-		ft_putchar(arg);
+		ft_putchar_fd(arg, 1);
 		return (1);
 }
 
@@ -65,15 +67,15 @@ int process_str(va_list types)
 		write(1, "null", 4);
 		return (4);
 	}
-	ft_putstr(arg);
+	ft_putstr_fd(arg, 1);
 	return (ft_strlen(arg));
 }
 
-/*uma que mostra %u/
+/*uma que mostra %u*/
 
-/*uma que mostra %x/
+/*uma que mostra %x*/
 
-/*uma que mostra %X/
+/*uma que mostra %X*/
 
 /*uma que mostra %*/
 

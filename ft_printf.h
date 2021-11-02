@@ -6,7 +6,7 @@
 /*   By: jde-alen <jde-alen@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 18:08:50 by jde-alen          #+#    #+#             */
-/*   Updated: 2021/10/30 18:32:35 by jde-alen         ###   ########.fr       */
+/*   Updated: 2021/11/02 18:24:57 by jde-alen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,12 @@
 #include <stdlib.h>
 
 
-int	ft_printf(const char *string, ...);
-void	ft_putchar(char c);
-void	ft_putstr(char *s);
+int		ft_printf(const char *string, ...);
+int 	ft_putchar_fd(const char c, int i);
+int		ft_putstr_fd(const char *s, int i);
+int		ft_strlen(const char *s);
+int 	process_str(va_list types);
+int		process_char(va_list types);
 
 
 #endif
