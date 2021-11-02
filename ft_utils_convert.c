@@ -6,7 +6,7 @@
 /*   By: jde-alen <jde-alen@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 19:50:57 by jde-alen          #+#    #+#             */
-/*   Updated: 2021/11/02 19:53:23 by jde-alen         ###   ########.fr       */
+/*   Updated: 2021/11/02 20:18:14 by jde-alen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,26 @@ char	*ft_itoa(int n)
 		j++;
 	}
 	return (res);
+}
+
+char 	*ft_untoa(unsigned int n)
+{
+	long long int 	nb;
+	int				i;
+	char			*dst;
+
+	nb = n;
+	i = 1;
+	while( n / 10 != 0 && i++)
+		n = n / 10;
+	dst = malloc(i + 1);
+	if(!dest)
+	return (NULL);
+	dst[i] = '\0'
+	while (i > -1 && i--)
+	{
+		dst[i] = nb % 10 + 48;
+		nb = nb / 10;
+	}
+	return (dst);
 }
