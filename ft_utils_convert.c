@@ -6,7 +6,7 @@
 /*   By: jde-alen <jde-alen@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 19:50:57 by jde-alen          #+#    #+#             */
-/*   Updated: 2021/11/06 19:01:22 by jde-alen         ###   ########.fr       */
+/*   Updated: 2021/11/06 19:02:30 by jde-alen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ char	*ft_untoa(unsigned int n)
 	if (!dst)
 		return (NULL);
 	dst[i] = '\0';
-		while (i > -1 && i--)
+	while (i > -1 && i--)
 	{
 		dst[i] = nb % 10 + 48;
 		nb = nb / 10;
