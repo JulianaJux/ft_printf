@@ -6,7 +6,7 @@
 /*   By: jde-alen <jde-alen@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 15:18:03 by jde-alen          #+#    #+#             */
-/*   Updated: 2021/11/06 18:21:54 by jde-alen         ###   ########.fr       */
+/*   Updated: 2021/11/06 18:38:01 by jde-alen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int	process_str(va_list types)
 	return (ft_strlen(arg));
 }
 /*uma que mostra %d e %i*/
+
 int	process_nbr(va_list types)
 {
 	int		arg;
@@ -50,6 +51,7 @@ int	process_nbr(va_list types)
 	return (j);
 }
 /*uma que mostra %u*/
+
 int	process_unsig(va_list types)
 {
 	unsigned long	arg;
