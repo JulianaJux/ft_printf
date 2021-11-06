@@ -6,18 +6,20 @@
 /*   By: jde-alen <jde-alen@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 19:44:38 by jde-alen          #+#    #+#             */
-/*   Updated: 2021/11/02 20:25:33 by jde-alen         ###   ########.fr       */
+/*   Updated: 2021/11/06 18:43:47 by jde-alen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 /*uma que printa*/
+
 int	ft_putchar_fd(const char c, int fd)
 {
 	write(1, &c, sizeof(c));
 	return (1);
 }
 /*printa string*/
+
 int	ft_putstr_fd(const char *s, int fd)
 {
 	if (!s)
@@ -30,6 +32,7 @@ int	ft_putstr_fd(const char *s, int fd)
 	return (ft_strlen(s));
 }
 /*tamanho total de str*/
+
 int	ft_strlen(const char *s)
 {
 	unsigned int	j;
