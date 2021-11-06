@@ -6,7 +6,7 @@
 /*   By: jde-alen <jde-alen@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 15:18:03 by jde-alen          #+#    #+#             */
-/*   Updated: 2021/11/06 18:54:28 by jde-alen         ###   ########.fr       */
+/*   Updated: 2021/11/06 18:57:11 by jde-alen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int	process_hex(va_list types, char str)
 	unsigned long	arg;
 	int				j;
 
-	arg = va_arg(args, unsigned long);
+	arg = va_arg(types, unsigned long);
 	if (str == 'x')
 		hextstr = ft_intohex(arg, "0123456789abcdef");
 	if (str == 'p')
