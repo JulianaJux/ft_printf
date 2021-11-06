@@ -6,7 +6,7 @@
 /*   By: jde-alen <jde-alen@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 19:50:57 by jde-alen          #+#    #+#             */
-/*   Updated: 2021/11/06 18:10:51 by jde-alen         ###   ########.fr       */
+/*   Updated: 2021/11/06 18:21:52 by jde-alen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ char	*ft_itoa(int n)
 
 char 	*ft_untoa(unsigned int n)
 {
-	long long int 	nb;
+	long long int	nb;
 	int				i;
 	char			*dst;
 

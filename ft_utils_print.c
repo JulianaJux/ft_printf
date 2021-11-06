@@ -6,7 +6,7 @@
 /*   By: jde-alen <jde-alen@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 15:18:03 by jde-alen          #+#    #+#             */
-/*   Updated: 2021/11/06 18:10:47 by jde-alen         ###   ########.fr       */
+/*   Updated: 2021/11/06 18:21:54 by jde-alen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 /*uma que mostra %c*/
 int	process_char(va_list types)
 {
-		int arg;
+	int	arg;
 
-		arg = va_arg(types, int);
-		ft_putchar_fd(arg, 1);
-		return (1);
+	arg = va_arg(types, int);
+	ft_putchar_fd(arg, 1);
+	return (1);
 }
 
 /*uma que mostra %s*/
-int process_str(va_list types)
+int	process_str(va_list types)
 {
-	char *arg;
+	char	*arg;
 
 	arg = va_arg(types, char *);
 	if (arg == 0)
@@ -33,13 +33,13 @@ int process_str(va_list types)
 		return (4);
 	}
 	ft_putstr_fd(arg, 1);
-	return (ft_strlen(arg)); 
+	return (ft_strlen(arg));
 }
 /*uma que mostra %d e %i*/
 int	process_nbr(va_list types)
 {
-	int 	arg;
-	int 	j;
+	int		arg;
+	int		j;
 	char	*nbtst;
 
 	arg = va_arg(types, int);
