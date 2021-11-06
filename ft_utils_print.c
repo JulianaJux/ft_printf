@@ -6,12 +6,13 @@
 /*   By: jde-alen <jde-alen@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 15:18:03 by jde-alen          #+#    #+#             */
-/*   Updated: 2021/11/06 18:50:42 by jde-alen         ###   ########.fr       */
+/*   Updated: 2021/11/06 18:54:28 by jde-alen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 /*uma que mostra %c*/
+
 int	process_char(va_list types)
 {
 	int	arg;
