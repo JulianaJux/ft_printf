@@ -6,7 +6,7 @@
 /*   By: jde-alen <jde-alen@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 15:18:03 by jde-alen          #+#    #+#             */
-/*   Updated: 2021/11/06 18:57:11 by jde-alen         ###   ########.fr       */
+/*   Updated: 2021/11/06 19:00:09 by jde-alen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	process_unsig(va_list types)
 {
 	unsigned long	arg;
 	int				j;
-	char			*nbtst
+	char			*nbtst;
 
 	arg = va_arg(types, unsigned long);
 	nbtst = ft_untoa(arg);
