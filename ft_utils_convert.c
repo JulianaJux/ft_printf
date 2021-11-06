@@ -6,7 +6,7 @@
 /*   By: jde-alen <jde-alen@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 19:50:57 by jde-alen          #+#    #+#             */
-/*   Updated: 2021/11/06 18:21:52 by jde-alen         ###   ########.fr       */
+/*   Updated: 2021/11/06 18:42:18 by jde-alen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ char	*ft_itoa(int n)
 	return (res);
 }
 
-char 	*ft_untoa(unsigned int n)
+char	*ft_untoa(unsigned int n)
 {
 	long long int	nb;
 	int				i;
@@ -77,13 +77,13 @@ char 	*ft_untoa(unsigned int n)
 
 	nb = n;
 	i = 1;
-	while( n / 10 != 0 && i++)
+	while (n / 10 != 0 && i++)
 		n = n / 10;
 	dst = malloc(i + 1);
-	if(!dest)
-	return (NULL);
+	if (!dest)
+		return (NULL);
 	dst[i] = '\0'
-	while (i > -1 && i--)
+		while (i > -1 && i--)
 	{
 		dst[i] = nb % 10 + 48;
 		nb = nb / 10;
@@ -107,7 +107,7 @@ char	*ft_intohex(unsigned long long i, char *l)
 	dst[d] = '\0';
 	while (d > 0 && d --)
 	{
-		if((nb % 16 <= 9))
+		if ((nb % 16 <= 9))
 			dst[d] = (nb % 16) + '0';
 		else
 			dst[d] = (nb % 16) - 10 + l;

@@ -6,7 +6,7 @@
 /*   By: jde-alen <jde-alen@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 15:17:59 by jde-alen          #+#    #+#             */
-/*   Updated: 2021/11/02 20:25:27 by jde-alen         ###   ########.fr       */
+/*   Updated: 2021/11/06 18:42:59 by jde-alen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ static int	ft_types(const char *str, va_list types, int *j)
 		return (process_nbr(types));
 	else if (str[*j] == 'u')
 		return (process_unsig(types));
-	/*else if (str[*j] == 'p')
-	else if (str[*j] == 'x' || str[*j] == 'X')*/
 	else
 	return (0);
 }

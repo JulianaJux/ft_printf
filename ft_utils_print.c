@@ -6,7 +6,7 @@
 /*   By: jde-alen <jde-alen@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 15:18:03 by jde-alen          #+#    #+#             */
-/*   Updated: 2021/11/06 18:38:01 by jde-alen         ###   ########.fr       */
+/*   Updated: 2021/11/06 18:41:06 by jde-alen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,12 +60,14 @@ int	process_unsig(va_list types)
 
 	arg = va_arg(types, unsigned long);
 	nbtst = ft_untoa(arg);
+
 	ft_putstr_fd(nbtst, 1);
 	j = ft_strlen(nbtst);
 	free(nbtst);
 	return (j);
 }
 /*uma que mostra %x, X e p*/
+
 int	process_hex(va_list types, char str)
 {
 	char			*hextstr;
