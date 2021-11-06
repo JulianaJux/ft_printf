@@ -6,7 +6,7 @@
 /*   By: jde-alen <jde-alen@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 15:17:59 by jde-alen          #+#    #+#             */
-/*   Updated: 2021/11/06 18:52:47 by jde-alen         ###   ########.fr       */
+/*   Updated: 2021/11/06 18:53:29 by jde-alen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,6 @@ int	ft_printf(const char *str, ...)
 			t = t + ft_putchar_fd(str[j], 1);
 		j++;
 	}
-		va_end (types);
+	va_end (types);
 	return (t);
 }
