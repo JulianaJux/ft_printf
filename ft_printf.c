@@ -6,7 +6,7 @@
 /*   By: jde-alen <jde-alen@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 15:17:59 by jde-alen          #+#    #+#             */
-/*   Updated: 2021/11/06 19:08:16 by jde-alen         ###   ########.fr       */
+/*   Updated: 2021/11/06 19:16:57 by jde-alen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,12 @@ static int	ft_types(const char *str, va_list types, int *j)
 	else if (str[*j] == 'p' || str[*j] == 'X' || str[*j] == 'x')
 		return (process_hex(types, str[*j]));
 	else
-		return (0);
+	{
+		write(1, "%", 1);
+		if (str[*j] != '%')
+			ft_putchar_fd(str[*j],1);
+	}
+		return (1);
 }
 
 int	ft_printf(const char *str, ...)
@@ -41,8 +46,6 @@ int	ft_printf(const char *str, ...)
 	{
 		if (str[j] == '%')
 		{
-			if (str[j] + 1 == '%')
-				ft_putchar_fd('%', 1);
 			j++;
 			t = t + ft_types(str, types, &j);
 		}
