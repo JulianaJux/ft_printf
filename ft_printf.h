@@ -6,7 +6,7 @@
 /*   By: jde-alen <jde-alen@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 18:08:50 by jde-alen          #+#    #+#             */
-/*   Updated: 2021/11/06 19:01:30 by jde-alen         ###   ########.fr       */
+/*   Updated: 2022/03/31 15:38:40 by jde-alen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,7 @@ int		process_char(va_list types);
 int		process_nbr(va_list types);
 int		process_unsig(va_list types);
 int		process_hex(va_list types, char str);
+char	*ft_ltoa_base(unsigned long n; char *base);
+char	*ft_utoa_base(unsigned int n, char *base)
 
 #endif

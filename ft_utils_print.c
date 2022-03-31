@@ -6,7 +6,7 @@
 /*   By: jde-alen <jde-alen@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 15:18:03 by jde-alen          #+#    #+#             */
-/*   Updated: 2021/11/06 19:00:09 by jde-alen         ###   ########.fr       */
+/*   Updated: 2022/03/31 15:39:10 by jde-alen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,14 +76,14 @@ int	process_hex(va_list types, char str)
 
 	arg = va_arg(types, unsigned long);
 	if (str == 'x')
-		hextstr = ft_intohex(arg, "0123456789abcdef");
+		hextstr = ft_utoa_base(arg, "0123456789abcdef");
 	if (str == 'p')
 	{
 		write(1, "0x", 2);
-		hextstr = ft_intohex(arg, "0123456789abcdef");
+		hextstr = ft_ltoa_base(arg, "0123456789abcdef");
 	}
 	if (str == 'X')
-		hextstr = ft_intohex(arg, "01234546789ABCDEF");
+		hextstr = ft_utoa_base(arg, "01234546789ABCDEF");
 	ft_putstr_fd(hextstr, 1);
 	j = ft_strlen(hextstr);
 	free(hextstr);
